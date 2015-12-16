@@ -10,13 +10,12 @@ See tests for detailed api. See below a basic working example of using the libra
   var user = require('./lib/simpleuser');
 
   var testEmail = "foo@bar.com",
-	  testPassword = "foo";
+      testPassword = "foo";
 
   var mUse = new user();
 
   var onUserError = function (err) {
-	  //
-	  console.log(err);
+      console.log(err);
   }
 
   /**
@@ -28,20 +27,19 @@ See tests for detailed api. See below a basic working example of using the libra
 
   mUse.setEmail(testEmail);
   mUse.setPassword(testPassword);
-  
+
   mUse.addUser().then(function () {
-  	//
-  	console.log("User added success");
-  
-  	mUse.findUser(testEmail).then(function () {
-  		//
-  		console.log("User retrieve success");
-  
-  		if (mUse.authUser(testPassword)) {
-  			//
-  			console.log("User auth success")
-  		};
-  	}, onUserError);
+      console.log("User added success");
+
+      mUse.findUser(testEmail).then(function () {
+ 
+          console.log("User retrieve success");
+
+          if (mUse.authUser(testPassword)) {
+
+              console.log("User auth success")
+          };
+      }, onUserError);
   }, onUserError);
 
 
