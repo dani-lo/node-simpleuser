@@ -1,0 +1,19 @@
+{
+  "name": "simpleuser",
+  "version": "1.0.0",
+  "description": "A simple utility nodejs class to store and retrieve users data, including a simple login system, FS storage based only",
+  "main": "index.js",
+  "dependencies": {
+    "fs-extra": "^0.26.2"
+  },
+  "devDependencies": {
+    "chai": "^3.4.1",
+    "grunt": "^0.4.5",
+    "mocha": "^2.3.4"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/mocha --reporter spec"
+  },
+  "author": "",
+  "license": "ISC"
+}
